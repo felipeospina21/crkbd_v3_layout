@@ -239,14 +239,14 @@ bool get_retro_tapping(uint16_t keycode, keyrecord_t *record) {
 }
 
 
-const uint16_t PROGMEM esc_combo[] = {KC_W, KC_F, COMBO_END};
-const uint16_t PROGMEM caps_combo[] = {KC_A, KC_R, COMBO_END};
+/* const uint16_t PROGMEM esc_combo[] = {KC_W, KC_F, COMBO_END}; */
+/* const uint16_t PROGMEM caps_combo[] = {KC_A, KC_R, COMBO_END}; */
 
-combo_t key_combos[] = {  
-    COMBO(esc_combo, KC_ESC),
-    // TODO: Change for regurlar key code, not working
-    COMBO(caps_combo, CW_TOGG),
-};
+/* combo_t key_combos[] = {   */
+/*     COMBO(esc_combo, KC_ESC), */
+/*     // TODO: Change for regurlar key code, not working */
+/*     COMBO(caps_combo, CW_TOGG), */
+/* }; */
 
 void leader_end_user(void){
   if(leader_sequence_one_key(KC_N)){
