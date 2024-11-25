@@ -20,7 +20,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <stdint.h>
 #include "oled.c"
 #include "os_detection.h"
-// #include "quantum.h"
 
 
 // Layer Modifiers
@@ -162,7 +161,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
      _______,  MOD_F6,  MOD_F7,  MOD_F8,  MOD_F9,  KC_F10,                      _______, _______, _______, _______, _______, _______,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-     _______,  KC_F11,  KC_F12,  CUT,     COPY,    PASTE,                      _______, _______, RGB_HUD, RGB_SAD, RGB_VAD, _______,
+     _______,  KC_F11,  KC_F12,  CUT,     COPY,    PASTE,                      _______, _______, RGB_HUD, RGB_SAD, RGB_VAD, RGB_TOG,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           _______, _______, _______,    _______, _______, _______
                                       //`--------------------------'  `--------------------------'
@@ -239,6 +238,7 @@ bool get_retro_tapping(uint16_t keycode, keyrecord_t *record) {
 }
 
 
+// Combos
 /* const uint16_t PROGMEM esc_combo[] = {KC_W, KC_F, COMBO_END}; */
 /* const uint16_t PROGMEM caps_combo[] = {KC_A, KC_R, COMBO_END}; */
 
@@ -262,33 +262,3 @@ void leader_end_user(void){
     SEND_STRING(SS_LCTL("4"));
   
   }
-//   uint8_t host_os = detected_host_os();
-
-//   switch (host_os){
-//     case OS_LINUX:
-//       if(leader_sequence_one_key(KC_N)){
-//         SEND_STRING(SS_LALT("1"));
-  
-//       }else if (leader_sequence_one_key(KC_E)){
-//         SEND_STRING(SS_LALT("2"));
-  
-//       }else if (leader_sequence_one_key(KC_I)){
-//         SEND_STRING(SS_LALT("3"));
-  
-//       }
-//       break;
-
-//     default:
-//       if(leader_sequence_one_key(KC_N)){
-//         SEND_STRING(SS_LCTL("1"));
-  
-//       }else if (leader_sequence_one_key(KC_E)){
-//         SEND_STRING(SS_LCTL("2"));
-  
-//       }else if (leader_sequence_one_key(KC_I)){
-//         SEND_STRING(SS_LCTL("3"));
-  
-//       }
-//       break;
-//   }
-}
